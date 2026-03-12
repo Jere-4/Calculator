@@ -62,5 +62,16 @@ public class ResultService {
             System.err.println("❌ Failed to save result to DB: " + dbUrl);
             e.printStackTrace();
         }
+
+        public double subtract(double a, double b) {
+            return a - b;
+        }
+
+        public double divide(double a, double b) {
+            if (b == 0) {
+                throw new ArithmeticException("Cannot divide by zero");
+            }
+            return a / b;
+        }
     }
 }
